@@ -2,67 +2,63 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Glassmorphism Modal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Glassmorphism Modal Transparent Background</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      height: 100vh;
-      background: url('') no-repeat center center/cover;
+    html, body {
+      margin: 0; padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background: transparent;
+      /* Make sure the page background is fully transparent */
+      overflow: hidden;
       display: flex;
       justify-content: center;
       align-items: center;
-      font-family: Arial, sans-serif;
     }
 
     #glass-modal {
       background: rgba(255, 255, 255, 0.15);
       border-radius: 20px;
-      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25);
+      padding: 30px;
+      width: 90%;
+      max-width: 400px;
+      color: #000;
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
       border: 1px solid rgba(255, 255, 255, 0.3);
-      padding: 30px;
-      max-width: 400px;
-      color: #fff;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
       text-align: center;
+      /* keep it on top */
+      position: relative;
+      z-index: 10;
     }
 
-    #glass-modal h2 {
-      margin-top: 0;
-    }
-
-    .close-btn {
+    button.close-btn {
       margin-top: 20px;
       padding: 10px 20px;
-      background: rgba(255, 255, 255, 0.2);
-      color: #fff;
       border: none;
       border-radius: 10px;
+      background: rgba(255, 255, 255, 0.3);
       cursor: pointer;
       backdrop-filter: blur(4px);
+      color: #000;
+      font-weight: bold;
+      transition: background 0.3s;
     }
 
-    .close-btn:hover {
-      background: rgba(255, 255, 255, 0.3);
+    button.close-btn:hover {
+      background: rgba(255, 255, 255, 0.5);
     }
   </style>
 </head>
 <body>
+
   <div id="glass-modal">
     <h2>Glassmorphism Modal</h2>
-    <p>This is a beautiful modal box with blur and transparency.</p>
-    <button class="close-btn" onclick="closeModal()">Close</button>
+    <p>This modal has a fully transparent background page.</p>
+    <button class="close-btn" onclick="document.getElementById('glass-modal').style.display='none'">Close</button>
   </div>
 
-  <script>
-    function closeModal() {
-      document.getElementById("glass-modal").style.display = "none";
-    }
-  </script>
 </body>
 </html>
