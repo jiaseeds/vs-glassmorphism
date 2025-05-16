@@ -3,62 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Glassmorphism Modal Transparent Background</title>
+  <title>Glassmorphism Box Only</title>
   <style>
     html, body {
       margin: 0; padding: 0;
       height: 100%;
-      font-family: Arial, sans-serif;
       background: transparent;
-      /* Make sure the page background is fully transparent */
-      overflow: hidden;
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
     #glass-modal {
-      background: rgba(255, 255, 255, 0.15);
+      background: rgba(255, 255, 255, 0.08); /* low-opacity white */
       border-radius: 20px;
-      padding: 30px;
       width: 90%;
       max-width: 400px;
-      color: #000;
+      height: 500px;
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.25);
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      /* keep it on top */
-      position: relative;
-      z-index: 10;
-    }
-
-    button.close-btn {
-      margin-top: 20px;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 10px;
-      background: rgba(255, 255, 255, 0.3);
-      cursor: pointer;
-      backdrop-filter: blur(4px);
-      color: #000;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-
-    button.close-btn:hover {
-      background: rgba(255, 255, 255, 0.5);
     }
   </style>
 </head>
 <body>
 
-  <div id="glass-modal">
-    <h2>Glassmorphism Modal</h2>
-    <p>This modal has a fully transparent background page.</p>
-    <button class="close-btn" onclick="document.getElementById('glass-modal').style.display='none'">Close</button>
-  </div>
+  <div id="glass-modal"></div>
 
 </body>
 </html>
