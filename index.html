@@ -39,8 +39,10 @@
     .glass-box {
       background: rgba(255, 255, 255, 0.15); /* Use white for glass effect */
       border-radius: 32px;
+      /* box-shadow removed as requested */
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
+      border: 2px solid rgba(255, 255, 255, 0.4); /* Subtle white border */
       width: 100vw;
       height: 100vh;
       transition: border-radius 0.2s;
